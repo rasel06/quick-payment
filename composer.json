@@ -1,0 +1,54 @@
+{
+    "name": "dspace/quick-payment",
+    "description": "Laravel Multi-Gateway Payment Package, Empower Laravel developers worldwide with seamless integration of multiple payment gateways using our Laravel Multi-Gateway Payment Package. ",
+    "keywords": [
+        "dspace",
+        "quick-payment"
+    ],
+    "homepage": "https://github.com/dspace/quick-payment",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Raseduz Zaman Rasel",
+            "email": "rasel06@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dspace\\QuickPayment\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Dspace\\QuickPayment\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Dspace\\QuickPayment\\QuickPaymentServiceProvider"
+            ],
+            "aliases": {
+                "QuickPayment": "Dspace\\QuickPayment\\QuickPaymentFacade"
+            }
+        }
+    }
+}
